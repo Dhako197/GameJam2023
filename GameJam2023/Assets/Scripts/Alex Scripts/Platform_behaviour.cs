@@ -8,7 +8,9 @@ public class Platform_behaviour : MonoBehaviour
 
     //atributos para plataforma destruccion
     public Sprite spritePlatfromDamege;
+    [SerializeField]
     SpriteRenderer spriteRenderer;
+
 
     //atributos rotación
     PlatformEffector2D platformEffector2D;
@@ -23,14 +25,16 @@ public class Platform_behaviour : MonoBehaviour
     {
               
         //Referencia del sprite
-        spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
+        //spriteRenderer = gameObject.GetComponentInChildren<SpriteRenderer>();
         //tipo default
         if (type > 2) 
             type = 0;
+        //referencia del platformeffector2D
         if (type == 1) 
             platformEffector2D = gameObject.GetComponent<PlatformEffector2D>();
 
         pSepeed = OtherPlayerMovement.instance.speed;
+        pJumpingPower = OtherPlayerMovement.instance.jumpingPower;
     }
     /*Comportamientos:
      * 0- destrucion
@@ -58,7 +62,8 @@ public class Platform_behaviour : MonoBehaviour
         //PLatform Destruction
         if (collision.CompareTag("Player") && type == 0) 
         {
-            Debug.Log("compareTag");
+            Debug.Log("Collision type1");
+        
             //cambio de srpite
             spriteRenderer.sprite = spritePlatfromDamege;
             //conteo atras
