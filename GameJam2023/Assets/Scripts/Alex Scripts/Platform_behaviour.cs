@@ -5,8 +5,6 @@ using UnityEngine;
 public class Platform_behaviour : MonoBehaviour
 {
     public int type;
-    //Creacion de collider 2d en codigo
-    BoxCollider2D bCollider;
 
     //atributos para plataforma destruccion
     public Sprite spritePlatfromDamege;
@@ -14,38 +12,42 @@ public class Platform_behaviour : MonoBehaviour
 
     //atributos rotación
     PlatformEffector2D platformEffector2D;
-    
+
+    //atributos para raices
+    float pSepeed;
+    float pJumpingPower;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        //Referenciacion del collider del objeto 
-        bCollider = gameObject.GetComponent<BoxCollider2D>();
+              
         //Referencia del sprite
         spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
         //tipo default
-        if (type >= 4) type = 0;
-        if (type == 2)
-        platformEffector2D= gameObject.GetComponent<PlatformEffector2D>();
-       
+        if (type > 2) 
+            type = 0;
+        if (type == 1) 
+            platformEffector2D = gameObject.GetComponent<PlatformEffector2D>();
+
+        pSepeed = OtherPlayerMovement.instance.speed;
     }
     /*Comportamientos:
-     * 1- destrucion
-     * 2-pivote, rotación
-     * 
+     * 0- destrucion
+     * 1-pivote, rotación
+     * 2- Raices
      *---------------- 
      *Destruccion: Cuadno el player toca la plataforma esta se emepzará a desmoronar para luego destruirse
+     *Pivote: Rotación del cuerp. Mantiene el Plantform effector mirando hacia arriba aunque gire
+     *Raices: Ralentización de movimiento
     */
     void Update()
-    {
-        if(type == 2)
-        {
+    {   
+        //Mantiene la plataorma de rotación con el effector sólido en la parte sup e intangible inf
+        if(type == 1){
             platformEffector2D.rotationalOffset = Mathf.Floor(-transform.localEulerAngles.z);
-
         }
-     
-        
+                   
 
     }
 
@@ -64,13 +66,32 @@ public class Platform_behaviour : MonoBehaviour
             //envio del objeto al pool / por ahora desactiva
             
         }
+        if (collision.CompareTag("Player") && type == 2)
+        {            
+            OtherPlayerMovement.instance.speed = 2;
+            OtherPlayerMovement.instance.jumpingPower = 10;
+            StartCoroutine(Corrutina(2));
+        }
             
     }
+
 
     IEnumerator Corrutina(int i)
     {
         Debug.Log("inicia corrutina");
-        yield return new WaitForSeconds(i);
-        gameObject.SetActive(false);
+        if (type == 1)
+        {
+            yield return new WaitForSeconds(i);
+            gameObject.SetActive(false);
+        }
+        
+
+        if (type == 2)
+        {
+            yield return new WaitForSeconds(i);
+            OtherPlayerMovement.instance.speed = pSepeed;
+            OtherPlayerMovement.instance.jumpingPower = pJumpingPower;
+            
+        }
     }
 }
