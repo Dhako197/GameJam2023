@@ -99,11 +99,12 @@ public class Waves : MonoBehaviour
 
             case 4:
 
-                PlataformaBasicaPool.Instance.Get().transform.position = spawnPoint[(int)randomSpawn].gameObject.transform.position; ;
+                
+                RaizPool.Instance.Get().transform.position = spawnPoint[(int)randomSpawn].gameObject.transform.position; ;
                 break;
 
             case 5:
-                DestroyPool.Instance.Get().transform.position = spawnPoint[(int)randomSpawn].gameObject.transform.position; break;
+                RotarPool.Instance.Get().transform.position = spawnPoint[(int)randomSpawn].gameObject.transform.position; break;
 
             default: break;
         }
