@@ -5,7 +5,9 @@ using UnityEngine;
 
 public class Heritage : MonoBehaviour
 {
-    public float lifespan;
+    public int lifespan;
+    public int currentlife;
+    public bool playing;
     public GameObject valorA;
     Valores scriptA;
     public GameObject valorB;
@@ -27,7 +29,7 @@ public class Heritage : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (currentlife >= lifespan) { currentlife= 0; Trascend(); }
     }
 
     public void Life()
@@ -36,33 +38,37 @@ public class Heritage : MonoBehaviour
     }
     IEnumerator WaitThenStart()
     {
-        yield return new WaitForSeconds(lifespan);
-        if(scriptA.value>=0)
+        yield return new WaitForSeconds(0.2f);
+        currentlife++;
+        Life();
+    }
+
+    public void Trascend()
+    {
+        if (scriptA.value >= 0)
         {
             Inheritance(scriptA, scriptA.value);
         }
-        else if(scriptA.value <0)
+        else if (scriptA.value < 0)
         {
             Inheritance(scriptA, -scriptA.value);
         }
-        if(scriptC.value>=0)
+        if (scriptC.value >= 0)
         {
             Inheritance(scriptC, scriptC.value);
         }
-        else if(scriptC.value <0)
+        else if (scriptC.value < 0)
         {
             Inheritance(scriptC, -scriptC.value);
         }
-        if(scriptB.value>=0)
+        if (scriptB.value >= 0)
         {
             Inheritance(scriptB, scriptB.value);
         }
-        else if(scriptB.value <0)
+        else if (scriptB.value < 0)
         {
             Inheritance(scriptB, -scriptB.value);
-
         }
-        Life();
     }
 
     public void Inheritance(Valores valoractual, int min)

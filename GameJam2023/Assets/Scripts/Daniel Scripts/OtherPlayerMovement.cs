@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class OtherPlayerMovement : MonoBehaviour
 {
@@ -77,6 +78,7 @@ public class OtherPlayerMovement : MonoBehaviour
     private void DestroyPlayer()
     {
         Debug.Log("Manco hp");
+        //SceneManager.LoadScene("Daniel Scene");
         gameObject.SetActive(false);
     }
 }
