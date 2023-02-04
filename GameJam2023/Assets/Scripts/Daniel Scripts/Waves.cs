@@ -18,6 +18,7 @@ public class Waves : MonoBehaviour
     Queue<float> Estados= new Queue<float>();
     private float tiempoEstados = 30f;
     public GameObject[] estadosImagenes;
+    public Transform[] spawnPoint;
 
     private static Waves instance;
     public static Waves Intance { get { return instance; } }
@@ -78,30 +79,31 @@ public class Waves : MonoBehaviour
     {
         float randomX = Random.Range(minX, maxX);
         float randomY= Random.Range(minY, maxY);
-        Debug.Log("Si genrea");
+        //Debug.Log("Si genrea");
 
         float randomPlatform = Random.Range(1, 6);
+        float randomSpawn = Random.Range(0, spawnPoint.Length );
 
         switch (randomPlatform) { 
             case 1:
 
-           PlataformaBasicaPool.Instance.Get().transform.position = new Vector2(randomX, randomY);
+                PlataformaBasicaPool.Instance.Get().transform.position = spawnPoint[(int)randomSpawn].gameObject.transform.position;
             break;
 
             case 2:
-            DestroyPool.Instance.Get().transform.position = new Vector2(randomX,randomY); break;
+            DestroyPool.Instance.Get().transform.position = spawnPoint[(int)randomSpawn].gameObject.transform.position; break;
 
 
             case 3:
-                RigidaPool.Instance.Get().transform.position= new Vector2(randomX,randomY); break;
+                RigidaPool.Instance.Get().transform.position= spawnPoint[(int)randomSpawn].gameObject.transform.position; break;
 
             case 4:
 
-                PlataformaBasicaPool.Instance.Get().transform.position = new Vector2(randomX, randomY);
+                PlataformaBasicaPool.Instance.Get().transform.position = spawnPoint[(int)randomSpawn].gameObject.transform.position; ;
                 break;
 
             case 5:
-                DestroyPool.Instance.Get().transform.position = new Vector2(randomX, randomY); break;
+                DestroyPool.Instance.Get().transform.position = spawnPoint[(int)randomSpawn].gameObject.transform.position; break;
 
             default: break;
         }
