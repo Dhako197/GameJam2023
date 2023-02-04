@@ -29,6 +29,6 @@ public class PlatformsMovement : MonoBehaviour
 
     private void DestroyPlatform()
     {
-        Destroy(gameObject);
+        PlataformaBasicaPool.Instance.Return(gameObject);
     }
 }

@@ -15,6 +15,11 @@ public class PowerCooldown : MonoBehaviour
     public float RestTime;
     public float RecoverTime;
     public float x;
+    public Image Fill1;
+    public Image Fill2;
+    private Color green = Color.green;
+    private Color orange = new Color(255f, 135f, 0f, 255f);
+    private Color red = Color.red;
     
     // Start is called before the first frame update
     void Start()
@@ -37,6 +42,7 @@ public class PowerCooldown : MonoBehaviour
         if(valuescript.two == true)
         { slideobject2.SetActive(true); }
         if(valuescript.two == false) { slideobject2.SetActive(false); }
+        
         if(tired == false && slide1.value <=99 && slide1.value >1)
         { 
             slide1.value += 1;
@@ -61,6 +67,19 @@ public class PowerCooldown : MonoBehaviour
             slide2.value += 2;
             Rest();
         }
+        if(slide1.value>30)
+        { Fill1.color = green; }
+        if(slide1.value<=30 && slide1.value >1)
+        { Fill1.color = orange; }
+        if(slide1.value <=1)
+        { Fill1.color = red; }
+
+        if (slide2.value > 30)
+        { Fill2.color = green; }
+        if (slide2.value <= 30 && slide2.value > 1)
+        { Fill2.color = orange; }
+        if (slide2.value <= 1)
+        { Fill2.color = red; }
     }
 
     public void Rest()
