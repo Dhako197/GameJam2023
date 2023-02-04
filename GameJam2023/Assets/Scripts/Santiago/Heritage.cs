@@ -8,6 +8,10 @@ public class Heritage : MonoBehaviour
     public float lifespan;
     public GameObject valorA;
     Valores scriptA;
+    public GameObject valorB;
+    Valores scriptB;
+    public GameObject valorC;
+    Valores scriptC;
     public int uporlow;
     public int result;
     // Start is called before the first frame update
@@ -15,6 +19,8 @@ public class Heritage : MonoBehaviour
     {
         
         scriptA = valorA.gameObject.GetComponent<Valores>();
+        scriptB = valorB.gameObject.GetComponent<Valores>();
+        scriptC = valorC.gameObject.GetComponent<Valores>();
         Life();
     }
 
@@ -31,23 +37,48 @@ public class Heritage : MonoBehaviour
     IEnumerator WaitThenStart()
     {
         yield return new WaitForSeconds(lifespan);
-        Inheritance();
+        if(scriptA.value>=0)
+        {
+            Inheritance(scriptA, scriptA.value);
+        }
+        else if(scriptA.value <0)
+        {
+            Inheritance(scriptA, -scriptA.value);
+        }
+        if(scriptC.value>=0)
+        {
+            Inheritance(scriptC, scriptC.value);
+        }
+        else if(scriptC.value <0)
+        {
+            Inheritance(scriptC, -scriptC.value);
+        }
+        if(scriptB.value>=0)
+        {
+            Inheritance(scriptB, scriptB.value);
+        }
+        else if(scriptB.value <0)
+        {
+            Inheritance(scriptB, -scriptB.value);
+
+        }
         Life();
     }
 
-    public void Inheritance()
+    public void Inheritance(Valores valoractual, int min)
     {
-        uporlow = Random.Range(1, 4);
-        result = Random.Range(0, 5);
-        if(uporlow <3)
+        uporlow = Random.Range(min, 7);
+        result = Random.Range(0, 3);
+        if(uporlow >= 6)
         {
-            if (scriptA.value > 0) { scriptA.value += result; }
-            if (scriptA.value <= 0) { scriptA.value -= result; }
+            if (valoractual.value > 0) { valoractual.value += result; }
+            if (valoractual.value <= 0) { valoractual.value -= result; }
         }
-        if (uporlow >=3)
+        if (uporlow <5)
         {
-            if (scriptA.value > 0) { scriptA.value -= result; }
-            if (scriptA.value <= 0) { scriptA.value += result; }
+            if (valoractual.value > 0) { valoractual.value -= result; }
+            if (valoractual.value <= 0) { valoractual.value += result; }
         }
+
     }
 }
