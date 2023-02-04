@@ -4,15 +4,10 @@ using UnityEngine;
 
 public class Valores : MonoBehaviour
 {
-    public int valueA;
-    public int valueB;
-    public int valueC;
-    public bool A1;
-    public bool A2;   
-    public bool B1;
-    public bool B2;
-    public bool C1;
-    public bool C2;
+    public int value;
+    public bool one;
+    public bool two;
+ 
     // Start is called before the first frame update
     void Start()
     {
@@ -22,65 +17,22 @@ public class Valores : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(valueA>2) { 
-            A1 = false; A2 = true;
+        if(value>2) { 
+            one = false; two = true;
         }
-        if(valueA<-2) {
-            A1 = true;A2 = false; 
+        if(value<-2) {
+            one = true; two = false; 
         }
-        if(valueA>=-2 && valueA<=2) {
-            A1 = false; A2 = false;
+        if(value>=-2 && value<=2) {
+            one = false; two = false;
         }
-        if(valueA>5)
+        if (value > 5)
         {
-            valueA = 5;
+            value = 5;
         }
-        if(valueA<-5)
+        if (value<-5)
         { 
-            valueA = -5;
-        }
-
-
-        if (valueB > 2)
-        {
-            B1 = false; B2 = true;
-        }
-        if (valueB < -2)
-        {
-            B1 = true; B2 = false;
-        }
-        if (valueB >= -2 && valueB <= 2)
-        {
-            B1 = false; B2 = false;
-        }
-        if (valueB > 5)
-        {
-            valueB = 5;
-        }
-        if (valueB < -5)
-        {
-            valueB = -5;
-        }
-
-        if (valueC > 2)
-        {
-            C1 = false; C2 = true;
-        }
-        if (valueC < -2)
-        {
-            C1 = true; C2 = false;
-        }
-        if (valueC >= -2 && valueC <= 2)
-        {
-            C1 = false; C2 = false;
-        }
-        if (valueC > 5)
-        {
-            valueC = 5;
-        }
-        if (valueC < -5)
-        {
-            valueC = -5;
+            value = -5;
         }
 
     }
