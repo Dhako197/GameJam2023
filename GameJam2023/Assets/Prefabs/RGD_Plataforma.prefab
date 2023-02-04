@@ -13,11 +13,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 232559811204553144, guid: 5bb7b21066e2ba24f95e770fcd88226d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.147
+      value: -4.41
       objectReference: {fileID: 0}
     - target: {fileID: 232559811204553144, guid: 5bb7b21066e2ba24f95e770fcd88226d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.009
+      value: 2.29
       objectReference: {fileID: 0}
     - target: {fileID: 232559811204553144, guid: 5bb7b21066e2ba24f95e770fcd88226d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -57,7 +57,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 232559811204553146, guid: 5bb7b21066e2ba24f95e770fcd88226d, type: 3}
       propertyPath: m_Name
-      value: DFLT_Plataforma (1)
+      value: RGD_Plataforma
       objectReference: {fileID: 0}
     - target: {fileID: 232559811204553147, guid: 5bb7b21066e2ba24f95e770fcd88226d, type: 3}
       propertyPath: m_Color.b
@@ -70,6 +70,14 @@ PrefabInstance:
     - target: {fileID: 232559811204553147, guid: 5bb7b21066e2ba24f95e770fcd88226d, type: 3}
       propertyPath: m_Color.r
       value: 0.16981132
+      objectReference: {fileID: 0}
+    - target: {fileID: 232559811204553150, guid: 5bb7b21066e2ba24f95e770fcd88226d, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 78902d5581af7704e9cbd93ebfc4ae77, type: 2}
+    - target: {fileID: 232559811204553150, guid: 5bb7b21066e2ba24f95e770fcd88226d, type: 3}
+      propertyPath: m_UsedByEffector
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5bb7b21066e2ba24f95e770fcd88226d, type: 3}

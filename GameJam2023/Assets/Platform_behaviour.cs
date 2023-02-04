@@ -4,12 +4,17 @@ using UnityEngine;
 
 public class Platform_behaviour : MonoBehaviour
 {
+    public int type;
     //Creacion de collider 2d en codigo
     BoxCollider2D bCollider;
 
     //atributos para plataforma destruccion
     public Sprite spritePlatfromDamege;
     SpriteRenderer spriteRenderer;
+
+    //atributos rotación
+    PlatformEffector2D platformEffector2D;
+    float x;
    
 
     // Start is called before the first frame update
@@ -19,6 +24,10 @@ public class Platform_behaviour : MonoBehaviour
         bCollider = gameObject.GetComponent<BoxCollider2D>();
         //Referencia del sprite
         spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
+        //tipo default
+        if (type >= 4) type = 0;
+        if (type == 2)
+        platformEffector2D= gameObject.GetComponent<PlatformEffector2D>();
        
     }
     /*Comportamientos:
@@ -30,7 +39,10 @@ public class Platform_behaviour : MonoBehaviour
     */
     void Update()
     {
-        
+       // x = transform.rotation.z;
+        //platformEffector2D.rotationalOffset = (-0.002*x^2) +(0.15*x+0);
+
+
     }
 
    
@@ -38,7 +50,7 @@ public class Platform_behaviour : MonoBehaviour
     {
         Debug.Log("colision");
         //PLatform Destruction
-        if (collision.CompareTag("Player")) 
+        if (collision.CompareTag("Player") && type == 0) 
         {
             Debug.Log("compareTag");
             //cambio de srpite
@@ -53,7 +65,7 @@ public class Platform_behaviour : MonoBehaviour
 
     IEnumerator Corrutina(int i)
     {
-        Debug.Log("inici corrutina");
+        Debug.Log("inicia corrutina");
         yield return new WaitForSeconds(i);
         gameObject.SetActive(false);
     }
