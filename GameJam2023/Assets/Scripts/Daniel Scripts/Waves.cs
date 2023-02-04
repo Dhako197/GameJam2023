@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq.Expressions;
 using UnityEngine;
 using UnityEngine.Playables;
 
@@ -26,9 +27,24 @@ public class Waves : MonoBehaviour
     {
         float randomX = Random.Range(minX, maxX);
         float randomY= Random.Range(minY, maxY);
-        Debug.Log("Sig enrea");
-        PlataformaBasicaPool.Instance.Get().transform.position = new Vector2(randomX, randomY);
+        Debug.Log("Si genrea");
 
+        float randomPlatform = Random.Range(1, 4);
+
+        switch (randomPlatform) { 
+            case 1:
+
+           PlataformaBasicaPool.Instance.Get().transform.position = new Vector2(randomX, randomY);
+            break;
+
+            case 2:
+            DestroyPool.Instance.Get().transform.position = new Vector2(randomX,randomY); break;
+
+
+            case 3:
+                RigidaPool.Instance.Get().transform.position= new Vector2(randomX,randomY); break;
+            default: break;
+        }
 
     }
 }

@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 232559811204553147}
   - component: {fileID: 232559811204553150}
   - component: {fileID: 232559811204553145}
+  - component: {fileID: 2724353373821404406}
+  - component: {fileID: 3742356357662186130}
   m_Layer: 3
   m_Name: DFLT_Plataforma
   m_TagString: Suelo
@@ -129,3 +131,36 @@ PlatformEffector2D:
   m_UseSideFriction: 0
   m_UseSideBounce: 0
   m_SideArc: 1
+--- !u!114 &2724353373821404406
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 232559811204553146}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d29ff3dc02a1a2d40aea9376b1d43aca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!50 &3742356357662186130
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 232559811204553146}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0

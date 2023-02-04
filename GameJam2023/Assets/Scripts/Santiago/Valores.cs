@@ -15,6 +15,9 @@ public class Valores : MonoBehaviour
     private Color blue= Color.blue;
     private Color pink = new Color(255f, 0f, 215f, 255f);
     private Color black = Color.black;
+    public Text number1;
+    public Text number2;
+    public Text number3;
  
     // Start is called before the first frame update
     void Start()
@@ -26,13 +29,13 @@ public class Valores : MonoBehaviour
     void Update()
     {
         if(value>2) { 
-            one = false; two = true; Fill2.color = pink; Fill1.color = pink;
+            one = false; two = true; Fill2.color = pink; Fill1.color = pink; number2.text = value.ToString(); number1.text = ""; number3.text = "";
         }
         if(value<-2) {
-            one = true; two = false; Fill1.color = blue; Fill2.color = blue;
+            one = true; two = false; Fill1.color = blue; Fill2.color = blue; number1.text = (-value).ToString(); number2.text = ""; number3.text = "";
         }
         if(value>=-2 && value<=2) {
-            one = false; two = false; Fill2.color = black; Fill1.color = black;
+            one = false; two = false; Fill2.color = black; Fill1.color = black; number3.text = "0"; number2.text = ""; number1.text = "";
         }
         if (value > 5)
         {
