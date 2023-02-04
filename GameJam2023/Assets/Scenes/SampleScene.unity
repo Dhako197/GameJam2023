@@ -3504,7 +3504,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cdb60536bedac754398805e1ba524372, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lifespan: 30
+  lifespan: 78
+  currentlife: 0
+  playing: 0
   valorA: {fileID: 918897625}
   valorB: {fileID: 495405183}
   valorC: {fileID: 805308686}

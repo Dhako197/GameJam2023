@@ -5,7 +5,19 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/StartScene.unity
+    guid: 5d76f10e980c0d3449fb3cd8816cf1b8
+  - enabled: 1
+    path: Assets/Scenes/DanielScene.unity
+    guid: 13e87085ecb3b5e4aaceb4520e800f0c
+  - enabled: 1
+    path: Assets/Scenes/CopiaDaniel.unity
+    guid: 5273dc1be1c41724384c2e200159a3dd
+  - enabled: 1
+    path: Assets/Scenes/GameOverScreen.unity
+    guid: ef2bce954a43dde4e99e21c4bc98f3e0
   m_configObjects: {}
