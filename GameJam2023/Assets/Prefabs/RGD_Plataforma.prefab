@@ -71,13 +71,43 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 0.16981132
       objectReference: {fileID: 0}
+<<<<<<< Updated upstream
     - target: {fileID: 232559811204553150, guid: 5bb7b21066e2ba24f95e770fcd88226d, type: 3}
       propertyPath: m_Material
       value: 
       objectReference: {fileID: 6200000, guid: 78902d5581af7704e9cbd93ebfc4ae77, type: 2}
     - target: {fileID: 232559811204553150, guid: 5bb7b21066e2ba24f95e770fcd88226d, type: 3}
       propertyPath: m_UsedByEffector
+=======
+    - target: {fileID: 232559811204553147, guid: 5bb7b21066e2ba24f95e770fcd88226d, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1115869910940763312, guid: 5bb7b21066e2ba24f95e770fcd88226d, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2724353373821404406, guid: 5bb7b21066e2ba24f95e770fcd88226d, type: 3}
+      propertyPath: m_Enabled
+>>>>>>> Stashed changes
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5bb7b21066e2ba24f95e770fcd88226d, type: 3}
+--- !u!1 &3047591905195066265 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 232559811204553146, guid: 5bb7b21066e2ba24f95e770fcd88226d, type: 3}
+  m_PrefabInstance: {fileID: 2986184908862593571}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &-4103616266646465539
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3047591905195066265}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7e6839690fb4fe4db71cb9a455020f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

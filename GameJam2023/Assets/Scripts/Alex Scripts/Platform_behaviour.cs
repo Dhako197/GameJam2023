@@ -14,8 +14,8 @@ public class Platform_behaviour : MonoBehaviour
 
     //atributos rotación
     PlatformEffector2D platformEffector2D;
-    float x;
-   
+    
+
 
     // Start is called before the first frame update
     void Start()
@@ -39,9 +39,13 @@ public class Platform_behaviour : MonoBehaviour
     */
     void Update()
     {
-       // x = transform.rotation.z;
-        //platformEffector2D.rotationalOffset = (-0.002*x^2) +(0.15*x+0);
+        if(type == 2)
+        {
+            platformEffector2D.rotationalOffset = Mathf.Floor(-transform.localEulerAngles.z);
 
+        }
+     
+        
 
     }
 
