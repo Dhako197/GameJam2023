@@ -12,6 +12,8 @@ public class DestroyPool : MonoBehaviour
     private static DestroyPool instance;
     public static DestroyPool Instance { get { return instance; } }
 
+    
+
     public void Awake()
     {
         if (instance == null)
