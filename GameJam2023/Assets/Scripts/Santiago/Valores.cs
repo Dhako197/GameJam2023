@@ -18,6 +18,7 @@ public class Valores : MonoBehaviour
     public Text number1;
     public Text number2;
     public Text number3;
+    
  
     // Start is called before the first frame update
     void Start()
@@ -29,13 +30,19 @@ public class Valores : MonoBehaviour
     void Update()
     {
         if(value>2) { 
-            one = false; two = true; Fill2.color = pink; Fill1.color = pink; number2.text = value.ToString(); number1.text = ""; number3.text = "";
+            one = false; two = true; Fill2.color = pink; Fill1.color = pink; number2.text = value.ToString(); number1.text = ""; number3.text = ""; 
         }
         if(value<-2) {
-            one = true; two = false; Fill1.color = blue; Fill2.color = blue; number1.text = (-value).ToString(); number2.text = ""; number3.text = "";
+            one = true; two = false; Fill1.color = blue; Fill2.color = blue; number1.text = (-value).ToString(); number2.text = ""; number3.text = ""; 
         }
         if(value>=-2 && value<=2) {
-            one = false; two = false; Fill2.color = black; Fill1.color = black; number3.text = "0"; number2.text = ""; number1.text = "";
+            one = false; two = false; Fill2.color = black; Fill1.color = black; 
+            if(value == 0)
+            {
+                number3.text = "0"; number2.text = ""; number1.text = "";
+            }
+            else if(value<0) { number3.text = ""; number1.text = (-value).ToString(); number2.text = ""; }
+            else if(value>0) { number3.text = ""; number1.text = ""; number2.text = value.ToString(); }
         }
         if (value > 5)
         {
