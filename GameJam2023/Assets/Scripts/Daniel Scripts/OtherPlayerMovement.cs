@@ -50,4 +50,14 @@ public class OtherPlayerMovement : MonoBehaviour
             transform.localScale = localScale;
         }
     }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("DeadSpace")) DestroyPlayer();
+    }
+
+    private void DestroyPlayer()
+    {
+        Debug.Log("Manco hp");
+        gameObject.SetActive(false);
+    }
 }
