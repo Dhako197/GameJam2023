@@ -189,7 +189,7 @@ MonoBehaviour:
   maxY: 5.5
   minX: -2.3
   minY: 5.4
-  timeBetweenSpawn: 0.5
+  timeBetweenSpawn: 2
   estadosImagenes:
   - {fileID: 809687835}
   - {fileID: 399122893}

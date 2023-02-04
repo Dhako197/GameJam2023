@@ -80,7 +80,7 @@ public class Waves : MonoBehaviour
         float randomY= Random.Range(minY, maxY);
         Debug.Log("Si genrea");
 
-        float randomPlatform = Random.Range(1, 4);
+        float randomPlatform = Random.Range(1, 6);
 
         switch (randomPlatform) { 
             case 1:
@@ -94,6 +94,15 @@ public class Waves : MonoBehaviour
 
             case 3:
                 RigidaPool.Instance.Get().transform.position= new Vector2(randomX,randomY); break;
+
+            case 4:
+
+                PlataformaBasicaPool.Instance.Get().transform.position = new Vector2(randomX, randomY);
+                break;
+
+            case 5:
+                DestroyPool.Instance.Get().transform.position = new Vector2(randomX, randomY); break;
+
             default: break;
         }
 

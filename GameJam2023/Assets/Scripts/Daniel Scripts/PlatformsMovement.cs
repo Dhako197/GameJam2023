@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlatformsMovement : MonoBehaviour
 {
     private Rigidbody2D rb2d;
-    private float speed = -1.5f;
+    private float speed = -0.7f;
 
     void Start()
     {
