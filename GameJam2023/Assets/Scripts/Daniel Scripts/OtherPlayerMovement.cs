@@ -4,14 +4,33 @@ using UnityEngine;
 
 public class OtherPlayerMovement : MonoBehaviour
 {
+    
+
     private float horizontal;
-    private float speed = 8f;
-    private float jumpingPower = 16f;
+    private float _speed = 8f;
+    private float _jumpingPower = 16f;
     private bool isFacingRight = true;
 
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
+
+    //Singleton Player
+    public static OtherPlayerMovement instance;
+
+    public float speed { get => _speed; set => _speed = value; }
+    public float jumpingPower { get => _jumpingPower; set => _jumpingPower = value; }
+
+    private void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+        }else{
+            Destroy(gameObject);
+        }
+        DontDestroyOnLoad(this);
+    }
 
     void Update()
     {
