@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Suelo
+  - BackGround
+  - DeadSpace
   layers:
   - Default
   - TransparentFX
@@ -12,7 +14,7 @@ TagManager:
   - Suelo
   - Water
   - UI
-  - 
+  - Player
   - 
   - 
   - 
