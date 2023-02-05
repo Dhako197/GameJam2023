@@ -159,7 +159,7 @@ public class Waves : MonoBehaviour
         }
         else if (colaTemp.Peek() == 1f)
         {
-            Bola.SetActive(true);
+          //  Bola.SetActive(true);
                 //Bola.SetActive(true);
                 float randomPlataforma = Random.Range(1, 8);
             switch (randomPlataforma)
