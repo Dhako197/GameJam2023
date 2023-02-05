@@ -27,7 +27,7 @@ public class Platform_behaviour : MonoBehaviour
         //Referencia del sprite
         //spriteRenderer = gameObject.GetComponentInChildren<SpriteRenderer>();
         //tipo default
-        if (type > 2) 
+        if (type > 3) 
             type = 0;
         //referencia del platformeffector2D
         if (type == 1) 
