@@ -16,9 +16,9 @@ public class Heritage : MonoBehaviour
     Valores scriptC;
     public int uporlow;
     public int result;
-    public GameObject young;
+   /* public GameObject young;
     public GameObject adult;
-    public GameObject elder;
+    public GameObject elder;*/
     // Start is called before the first frame update
     void Start()
     {
