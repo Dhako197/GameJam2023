@@ -23,15 +23,15 @@ public class Platform_behaviour : MonoBehaviour
     
     //Poder de solidez
     private bool activeSolid;
-    public GameObject _gameObject;
+    public GameObject valorC;
     Valores valores;
 
     // Start is called before the first frame update
     void Start()
     {
-        _gameObject = GameObject.Find("Valor C");
+        valorC = GameObject.Find("Valor C");
         activeSolid = false;
-        valores = _gameObject.GetComponent<Valores>();
+        valores = valorC.GetComponent<Valores>();
 
         playerGaObjc = GameObject.FindWithTag("Player");
         player=playerGaObjc.GetComponent<OtherPlayerMovement>();
