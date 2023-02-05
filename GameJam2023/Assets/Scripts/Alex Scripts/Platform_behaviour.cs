@@ -10,6 +10,7 @@ public class Platform_behaviour : MonoBehaviour
     public Sprite spriteChange0, spriteChange1, spriteChange2;
     [SerializeField]
     SpriteRenderer spriteRenderer;
+    int colisiones = 0;
 
 
     //atributos rotación
@@ -72,9 +73,10 @@ public class Platform_behaviour : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        colisiones++;
         Debug.Log("colision");
-        //PLatform Destruction
-        if (collision.CompareTag("Player") && type == 0 && activeSolid==false) 
+        //Platform Destruction
+        if (collision.CompareTag("Player") && type == 0 && activeSolid==false && colisiones>=2) 
         {           
              //cambio de srpite
             spriteRenderer.sprite = spriteChange0;
