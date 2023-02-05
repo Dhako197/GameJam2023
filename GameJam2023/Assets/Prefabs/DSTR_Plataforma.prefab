@@ -89,7 +89,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6392517166718729970}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d29ff3dc02a1a2d40aea9376b1d43aca, type: 3}
   m_Name: 
@@ -154,8 +154,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 0
-  spritePlatfromDamege: {fileID: 21300000, guid: 2eea773884966f74c95f2c9a2b61ad6d, type: 3}
+  spriteChange0: {fileID: 21300000, guid: 23088d5e00d18ac42bb93ff7bc733a2c, type: 3}
+  spriteChange1: {fileID: 21300000, guid: 479a795fbcf97e54482ba4a04f3ff175, type: 3}
+  spriteChange2: {fileID: 21300000, guid: 07adb723d5cbe214593365fd1c07749e, type: 3}
   spriteRenderer: {fileID: 1143678366905660424}
+  _gameObject: {fileID: 0}
 --- !u!1 &6881312030411813243
 GameObject:
   m_ObjectHideFlags: 0
@@ -227,7 +230,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: eb9dc513f0dd1f345b35db378611d176, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2e9e8ccf26b7e2e418f26fe72cff34c5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
