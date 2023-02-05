@@ -191,7 +191,7 @@ MonoBehaviour:
   maxY: 7
   minX: -2.3
   minY: 6.5
-  timeBetweenSpawn: 0.5
+  timeBetweenSpawn: 1
   estadosImagenes:
   - {fileID: 809687835}
   - {fileID: 399122893}
@@ -3905,7 +3905,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0.2924528, g: 0.2924528, b: 0.2924528, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -4659,6 +4659,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1385b3116ddb4b4bbb95cf8077f2348, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _jumpingPower: 24
   rb: {fileID: 2131888524}
   groundCheck: {fileID: 1292356987}
   groundLayer:
