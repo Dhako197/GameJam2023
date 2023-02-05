@@ -3804,8 +3804,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -0.146}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -298.24286, y: 137.54224}
-  m_SizeDelta: {x: 511.2706, y: 238.6979}
+  m_AnchoredPosition: {x: -355, y: 53}
+  m_SizeDelta: {x: 353.4233, y: 247.7409}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1664557422
 MonoBehaviour:
@@ -3827,7 +3827,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 7401c530ad641414a90f172e8933d6d4, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3999,6 +3999,10 @@ PrefabInstance:
     - target: {fileID: 2159132746175304463, guid: cc74ce6b4c8b2a54ebfcc6676a39731a, type: 3}
       propertyPath: sepia.r
       value: 0.69803923
+      objectReference: {fileID: 0}
+    - target: {fileID: 2159132746175304463, guid: cc74ce6b4c8b2a54ebfcc6676a39731a, type: 3}
+      propertyPath: lifespan
+      value: 58
       objectReference: {fileID: 0}
     - target: {fileID: 2159132746298608611, guid: cc74ce6b4c8b2a54ebfcc6676a39731a, type: 3}
       propertyPath: m_SizeDelta.x
