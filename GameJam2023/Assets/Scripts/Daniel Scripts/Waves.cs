@@ -184,7 +184,7 @@ public class Waves : MonoBehaviour
         else if (colaTemp.Peek() == 2f)
         {
             
-            timeBetweenSpawn = 1f;
+            timeBetweenSpawn = 1.5f;
 
             float randomPlataforma = Random.Range(1, 6);
             switch (randomPlataforma)
