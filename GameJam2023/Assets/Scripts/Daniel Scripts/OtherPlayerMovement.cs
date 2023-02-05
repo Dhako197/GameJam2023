@@ -11,6 +11,7 @@ public class OtherPlayerMovement : MonoBehaviour
     private float _speed = 8f;
     public float _jumpingPower = 16f;
     private bool isFacingRight = true;
+    public AudioSource jumpsound;
     //private bool inAir = false;
 
     [SerializeField] private Rigidbody2D rb;
@@ -42,6 +43,7 @@ public class OtherPlayerMovement : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.UpArrow) && rb.velocity.y > 0f)
         {
+            jumpsound.Play();
             rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
         }
 
