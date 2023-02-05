@@ -2246,7 +2246,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 4
   m_Sprite: {fileID: 21300000, guid: 4d80af9f08222ea4d80cf80c71f66014, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -3942,6 +3942,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: UI
       objectReference: {fileID: 0}
+    - target: {fileID: 452925961911289022, guid: cc74ce6b4c8b2a54ebfcc6676a39731a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2159132746175304463, guid: cc74ce6b4c8b2a54ebfcc6676a39731a, type: 3}
       propertyPath: spr
       value: 
@@ -3998,6 +4002,18 @@ PrefabInstance:
       propertyPath: m_Color.g
       value: 0.8235294
       objectReference: {fileID: 0}
+    - target: {fileID: 2159132746478835852, guid: cc74ce6b4c8b2a54ebfcc6676a39731a, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2159132746478835852, guid: cc74ce6b4c8b2a54ebfcc6676a39731a, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2159132746478835852, guid: cc74ce6b4c8b2a54ebfcc6676a39731a, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2159132746595329123, guid: cc74ce6b4c8b2a54ebfcc6676a39731a, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -4037,6 +4053,18 @@ PrefabInstance:
     - target: {fileID: 2159132746747564818, guid: cc74ce6b4c8b2a54ebfcc6676a39731a, type: 3}
       propertyPath: m_AnchorMin.x
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2159132746835241765, guid: cc74ce6b4c8b2a54ebfcc6676a39731a, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2159132746835241765, guid: cc74ce6b4c8b2a54ebfcc6676a39731a, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2159132746835241765, guid: cc74ce6b4c8b2a54ebfcc6676a39731a, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2159132746854263890, guid: cc74ce6b4c8b2a54ebfcc6676a39731a, type: 3}
       propertyPath: m_AnchorMax.x
@@ -4238,6 +4266,18 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -98.5544
       objectReference: {fileID: 0}
+    - target: {fileID: 2159132747997208536, guid: cc74ce6b4c8b2a54ebfcc6676a39731a, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2159132747997208536, guid: cc74ce6b4c8b2a54ebfcc6676a39731a, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2159132747997208536, guid: cc74ce6b4c8b2a54ebfcc6676a39731a, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2159132748042292805, guid: cc74ce6b4c8b2a54ebfcc6676a39731a, type: 3}
       propertyPath: black.a
       value: 1
@@ -4280,6 +4320,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2159132748090156784, guid: cc74ce6b4c8b2a54ebfcc6676a39731a, type: 3}
       propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2159132748141584713, guid: cc74ce6b4c8b2a54ebfcc6676a39731a, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2159132748141584713, guid: cc74ce6b4c8b2a54ebfcc6676a39731a, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2159132748141584713, guid: cc74ce6b4c8b2a54ebfcc6676a39731a, type: 3}
+      propertyPath: m_AnchorMin.x
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2159132748161150625, guid: cc74ce6b4c8b2a54ebfcc6676a39731a, type: 3}
