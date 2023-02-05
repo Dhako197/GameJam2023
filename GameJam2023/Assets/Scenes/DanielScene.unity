@@ -192,6 +192,10 @@ MonoBehaviour:
   minX: -2.3
   minY: 6.5
   timeBetweenSpawn: 1
+  escudo: {fileID: 5314933080144418152, guid: 3cb4002352e79224f90f0d43c5e71ee5, type: 3}
+  mirar: {fileID: 1258807128087045461, guid: 720565826c0af744085048f889cea529, type: 3}
+  quemadura: {fileID: 2272935356716316938, guid: d37a103917dc3f74aae7240327a50ab6, type: 3}
+  traspasar: {fileID: 7156616690022430283, guid: 84a890fcf96eab640b60b3f6322f478e, type: 3}
   estadosImagenes:
   - {fileID: 809687835}
   - {fileID: 399122893}
@@ -5804,7 +5808,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1385b3116ddb4b4bbb95cf8077f2348, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _jumpingPower: 24
+  _jumpingPower: 26
   jumpsound: {fileID: 761725481}
   rb: {fileID: 2131888524}
   groundCheck: {fileID: 1292356987}
