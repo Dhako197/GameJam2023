@@ -23,7 +23,9 @@ public class Valores : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        value = Random.Range(-3, 3);
+        if(value >=-2 && value <0) { value = -3;  }
+        if(value <=2 && value >=0) { value = 3; }
     }
 
     // Update is called once per frame
