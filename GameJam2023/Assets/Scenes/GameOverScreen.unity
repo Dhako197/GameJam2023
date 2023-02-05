@@ -162,8 +162,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000019506, y: -62}
-  m_SizeDelta: {x: 312.5871, y: 224.9575}
+  m_AnchoredPosition: {x: 0.3273, y: -53.6379}
+  m_SizeDelta: {x: 226.9183, y: 195.743}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &46081081
 MonoBehaviour:
@@ -441,7 +441,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 24.416}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -317.39267, y: -74.33121}
+  m_AnchoredPosition: {x: -238, y: -67}
   m_SizeDelta: {x: 235.3312, y: 60.5315}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &710145709
@@ -647,8 +647,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.0024567, y: 0}
-  m_SizeDelta: {x: 1101, y: 519}
+  m_AnchoredPosition: {x: 0.3291, y: 0.3105}
+  m_SizeDelta: {x: 799.2559, y: 451.5993}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &955046710
 MonoBehaviour:
@@ -881,7 +881,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -970,8 +970,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.0024567, y: 48}
-  m_SizeDelta: {x: 714.7209, y: 118.6013}
+  m_AnchoredPosition: {x: 10.3947, y: 37.70066}
+  m_SizeDelta: {x: 615.9955, y: 111.9516}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1938655126
 MonoBehaviour:
@@ -995,10 +995,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 44
+    m_FontSize: 38
     m_FontStyle: 1
     m_BestFit: 0
-    m_MinSize: 4
+    m_MinSize: 3
     m_MaxSize: 50
     m_Alignment: 4
     m_AlignByGeometry: 0
