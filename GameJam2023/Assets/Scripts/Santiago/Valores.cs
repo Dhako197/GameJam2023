@@ -55,6 +55,6 @@ public class Valores : MonoBehaviour
 
         slide1.value = -value;
         slide2.value = value ;
-
+        
     }
 }
