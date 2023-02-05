@@ -44,6 +44,7 @@ GameObject:
   - component: {fileID: 9058427964505559849}
   - component: {fileID: 5274830556461327179}
   - component: {fileID: 9058427964505559858}
+  - component: {fileID: 1683551842}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -190,8 +191,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1385b3116ddb4b4bbb95cf8077f2348, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _jumpingPower: 24
   rb: {fileID: 9058427964505559861}
   groundCheck: {fileID: 9058427963665831874}
   groundLayer:
     serializedVersion: 2
     m_Bits: 8
+--- !u!114 &1683551842
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9058427964505559859}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad18e355d531f6a4092eaa7558286642, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  n_Platform: RGD_Plataforma
+  _gameObject: {fileID: 0}

@@ -19,11 +19,19 @@ public class Platform_behaviour : MonoBehaviour
     OtherPlayerMovement player;
     GameObject playerGaObjc;
     bool vivo;
-
+    
+    //Poder de solidez
+    private bool activeSolid;
+    public GameObject _gameObject;
+    Valores valores;
 
     // Start is called before the first frame update
     void Start()
     {
+        _gameObject = GameObject.Find("Valor C");
+        activeSolid = false;
+        valores = _gameObject.GetComponent<Valores>();
+
         playerGaObjc = GameObject.FindWithTag("Player");
         player=playerGaObjc.GetComponent<OtherPlayerMovement>();
 
@@ -55,23 +63,23 @@ public class Platform_behaviour : MonoBehaviour
         if(type == 1){
             platformEffector2D.rotationalOffset = Mathf.Floor(-transform.localEulerAngles.z);
         }
-                   
 
+        if (valores.two)
+            activeSolid = true;
+        else
+            activeSolid = false;
     }
 
-   
     private void OnTriggerEnter2D(Collider2D collision)
     {
         Debug.Log("colision");
         //PLatform Destruction
-        if (collision.CompareTag("Player") && type == 0) 
-        {
-            Debug.Log("Collision type1");
-        
-            //cambio de srpite
+        if (collision.CompareTag("Player") && type == 0 && activeSolid==false) 
+        {           
+             //cambio de srpite
             spriteRenderer.sprite = spriteChange0;
             //conteo atras
-            StartCoroutine(Corrutina(2));          
+            StartCoroutine(Corrutina(2f));          
             
         }
         if (collision.CompareTag("Player") && type == 2 && vivo)
@@ -87,9 +95,21 @@ public class Platform_behaviour : MonoBehaviour
     }
 
 
-    IEnumerator Corrutina(int i)
+    IEnumerator Corrutina(float i)
     {
+
         Debug.Log("inicia corrutina");
+
+        if(type == 0 )
+        {
+            yield return new WaitForSeconds(i+2);
+            spriteRenderer.sprite = spriteChange1;
+            yield return new WaitForSeconds(i+1);
+            spriteRenderer.sprite = spriteChange2;
+            yield return new WaitForSeconds(i-1.9f);
+            gameObject.SetActive(false);
+
+        }
         if (type == 1)
         {
             yield return new WaitForSeconds(i);
