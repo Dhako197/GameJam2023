@@ -42,6 +42,7 @@ GameObject:
   - component: {fileID: 9058427964505559860}
   - component: {fileID: 9058427964505559861}
   - component: {fileID: 9058427964505559849}
+  - component: {fileID: 9044204717971316387}
   - component: {fileID: 5274830556461327179}
   - component: {fileID: 9058427964505559858}
   - component: {fileID: 1683551842}
@@ -165,6 +166,22 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 2}
   m_EdgeRadius: 0
+--- !u!58 &9044204717971316387
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9058427964505559859}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 1
 --- !u!114 &5274830556461327179
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -192,6 +209,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _jumpingPower: 24
+  jumpsound: {fileID: 0}
   rb: {fileID: 9058427964505559861}
   groundCheck: {fileID: 9058427963665831874}
   groundLayer:

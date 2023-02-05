@@ -95,7 +95,22 @@ public class Platform_behaviour : MonoBehaviour
         }
             
     }
+    public void marchitador()
+    {
+        vivo = false;
+        StartCoroutine(changeSprite());
+        
+    }
 
+
+    public IEnumerator changeSprite()
+    {
+        yield return new WaitForSeconds(0.3f);
+        spriteRenderer.sprite = spriteChange0;
+        yield return new WaitForSeconds(0.3f);
+        spriteRenderer.sprite = spriteChange1;
+       
+    }
 
     IEnumerator Corrutina(float i)
     {
