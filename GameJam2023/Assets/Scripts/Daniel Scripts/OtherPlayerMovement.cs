@@ -11,7 +11,7 @@ public class OtherPlayerMovement : MonoBehaviour
     private float _speed = 8f;
     public float _jumpingPower = 16f;
     private bool isFacingRight = true;
-    private bool inAir = false;
+    //private bool inAir = false;
 
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Transform groundCheck;
@@ -42,13 +42,9 @@ public class OtherPlayerMovement : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.UpArrow) && IsGrounded())
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
-            inAir = true;
+            //inAir = true;
         }
-        else if (Input.GetKeyDown(KeyCode.UpArrow) && inAir)
-        {
-            rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
-            inAir = false;
-        }
+       
 
         if (Input.GetKeyDown(KeyCode.UpArrow) && rb.velocity.y > 0f)
         {
