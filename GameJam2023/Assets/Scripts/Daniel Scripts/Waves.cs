@@ -16,6 +16,11 @@ public class Waves : MonoBehaviour
     private float valorAnterior;
     private float tiempoEntreWavesTemp;
 
+    public GameObject escudo;
+    public GameObject mirar;
+    public GameObject quemadura;
+    public GameObject traspasar;
+
 
     Queue<float> Estados= new Queue<float>();
     private float tiempoEstados = 30f;
@@ -117,7 +122,7 @@ public class Waves : MonoBehaviour
         if (colaTemp.Peek() == 0)
         {
             
-            float randomPlataforma = Random.Range(1, 6);
+            float randomPlataforma = Random.Range(1, 8);
             switch (randomPlataforma)
             {
                 case 1:
@@ -141,15 +146,18 @@ public class Waves : MonoBehaviour
                 case 5:
                     RaizPool.Instance.Get().transform.position = spawnPoint[(int)randomSpawn].gameObject.transform.position; break;
 
-               
+         
 
-                default: break;
+
+                default: GenerarEspeciales(randomSpawn);
+                    
+                    break;
             }
         }
         else if (colaTemp.Peek() == 1f)
         {
            
-            float randomPlataforma = Random.Range(1, 6);
+            float randomPlataforma = Random.Range(1, 8);
             switch (randomPlataforma)
             {
                 case 1:
@@ -174,7 +182,10 @@ public class Waves : MonoBehaviour
                     RaizPool.Instance.Get().transform.position = spawnPoint[(int)randomSpawn].gameObject.transform.position; break;
 
 
-                default: break;
+                default:
+                    GenerarEspeciales(randomSpawn);
+
+                    break;
             }
         }
        
@@ -182,7 +193,7 @@ public class Waves : MonoBehaviour
         else if (colaTemp.Peek() == 2f)
         {
             
-            float randomPlataforma = Random.Range(1, 6);
+            float randomPlataforma = Random.Range(1, 8);
             switch (randomPlataforma)
             {
                 case 1:
@@ -206,9 +217,12 @@ public class Waves : MonoBehaviour
                 case 5:
                    RigidaPool.Instance.Get().transform.position = spawnPoint[(int)randomSpawn].gameObject.transform.position; break;
 
-               
 
-                default: break;
+
+                default:
+                    GenerarEspeciales(randomSpawn);
+
+                    break;
             }
         }
         else if (colaTemp.Peek() == 3f)
@@ -284,4 +298,33 @@ public class Waves : MonoBehaviour
         }
 
     }
+    private void GenerarEspeciales(float spawn)
+    {
+        float cual = Random.Range(0, 4);
+
+        switch (cual)
+        {
+            case 0:
+                GameObject go = Instantiate(escudo);
+                go.transform.position = spawnPoint[(int)spawn].gameObject.transform.position;
+                break;
+
+            case 1:
+                GameObject go1 = Instantiate(mirar);
+                go1.transform.position = spawnPoint[(int)spawn].gameObject.transform.position;
+                break;
+            case 2:
+                GameObject go2 = Instantiate(quemadura);
+                go2.transform.position = spawnPoint[(int)spawn].gameObject.transform.position;
+                break;
+            case 3:
+                GameObject go3 = Instantiate(traspasar);
+                go3.transform.position = spawnPoint[(int)spawn].gameObject.transform.position;
+                break;
+        }
+
+
+
+    }
+
 }

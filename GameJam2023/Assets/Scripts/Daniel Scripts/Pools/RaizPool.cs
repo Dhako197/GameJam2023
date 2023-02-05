@@ -50,7 +50,7 @@ public class RaizPool : MonoBehaviour
     {
         GameObject ret;
 
-         int ram = Random.Range(0, 4);
+         int ram = Random.Range(0, 3);
 
         switch (ram)
         {
@@ -96,7 +96,9 @@ public class RaizPool : MonoBehaviour
 
                 ret.SetActive(true);
                 return ret;
-            default: return null;
+            default:
+                ret = null;
+                return ret;
         }
 
        
