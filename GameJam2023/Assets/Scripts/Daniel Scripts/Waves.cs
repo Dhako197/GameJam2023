@@ -116,7 +116,7 @@ public class Waves : MonoBehaviour
         //float valorEstado = colaTemp.Dequeue();
         if (colaTemp.Peek() == 0)
         {
-            timeBetweenSpawn = tiempoEntreWavesTemp;
+            
             float randomPlataforma = Random.Range(1, 6);
             switch (randomPlataforma)
             {
@@ -148,7 +148,7 @@ public class Waves : MonoBehaviour
         }
         else if (colaTemp.Peek() == 1f)
         {
-            timeBetweenSpawn = tiempoEntreWavesTemp;
+           
             float randomPlataforma = Random.Range(1, 6);
             switch (randomPlataforma)
             {
@@ -181,7 +181,7 @@ public class Waves : MonoBehaviour
         
         else if (colaTemp.Peek() == 2f)
         {
-            timeBetweenSpawn = tiempoEntreWavesTemp;
+            
             float randomPlataforma = Random.Range(1, 6);
             switch (randomPlataforma)
             {
@@ -213,7 +213,7 @@ public class Waves : MonoBehaviour
         }
         else if (colaTemp.Peek() == 3f)
         {
-            timeBetweenSpawn = tiempoEntreWavesTemp;
+            
             float randomPlataforma = Random.Range(1, 6);
             switch (randomPlataforma)
             {
