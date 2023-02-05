@@ -7,6 +7,7 @@ public class Score : MonoBehaviour
 {
     static int playerScore;
     public Text txt;
+    public Heritage herscript;
 
     // Start is called before the first frame update
     void Start()
@@ -19,13 +20,14 @@ public class Score : MonoBehaviour
     void Update()
     {
         PlayerPrefs.SetInt("score", playerScore);
-        txt.text = "llevas: " + playerScore.ToString() + " años";
+        txt.text = "Familia " + PlayerPrefs.GetString("familyname") + ": " + playerScore.ToString() + " años";
     }
 
     IEnumerator Onesecond()
     {
         yield return new WaitForSeconds(0.2f);
-        playerScore++;
+        if(herscript.infoing == false) { playerScore++; }
+        
         StartCoroutine(Onesecond());
     }
 }

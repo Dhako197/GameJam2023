@@ -14,7 +14,7 @@ public class Valores : MonoBehaviour
     public Image Fill2;
     public Color color1;
     public Color color2;
-    private Color black = Color.white;
+    public Color black;
     public Text number1;
     public Text number2;
     public Text number3;
