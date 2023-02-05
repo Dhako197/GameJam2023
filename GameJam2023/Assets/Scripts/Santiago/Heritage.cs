@@ -10,8 +10,8 @@ public class Heritage : MonoBehaviour
     public bool playing;
     public GameObject valorA;
     Valores scriptA;
-    public GameObject valorB;
-    Valores scriptB;
+   // public GameObject valorB;
+   // Valores scriptB;
     public GameObject valorC;
     Valores scriptC;
     public int uporlow;
@@ -24,7 +24,7 @@ public class Heritage : MonoBehaviour
     {
         
         scriptA = valorA.gameObject.GetComponent<Valores>();
-        scriptB = valorB.gameObject.GetComponent<Valores>();
+       // scriptB = valorB.gameObject.GetComponent<Valores>();
         scriptC = valorC.gameObject.GetComponent<Valores>();
         Life();
     }
@@ -67,14 +67,14 @@ public class Heritage : MonoBehaviour
         {
             Inheritance(scriptC, -scriptC.value);
         }
-        if (scriptB.value >= 0)
+      /*  if (scriptB.value >= 0)
         {
             Inheritance(scriptB, scriptB.value);
         }
         else if (scriptB.value < 0)
         {
             Inheritance(scriptB, -scriptB.value);
-        }
+        }*/
     }
 
     public void Inheritance(Valores valoractual, int min)
