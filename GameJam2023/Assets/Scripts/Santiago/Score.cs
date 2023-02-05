@@ -20,7 +20,7 @@ public class Score : MonoBehaviour
     void Update()
     {
         PlayerPrefs.SetInt("score", playerScore);
-        txt.text = "Familia " + PlayerPrefs.GetString("familyname") + ": " + playerScore.ToString() + " años";
+        txt.text = "Linaje " + PlayerPrefs.GetString("familyname") + ": " + playerScore.ToString() + " años";
     }
 
     IEnumerator Onesecond()
