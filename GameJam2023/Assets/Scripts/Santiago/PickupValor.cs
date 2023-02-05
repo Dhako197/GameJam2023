@@ -5,16 +5,16 @@ using UnityEngine;
 public class PickupValor : MonoBehaviour
 {
     public GameObject valorA;
-    public GameObject valorB;
+    //public GameObject valorB;
     public GameObject valorC;
     Valores scriptA;
-    Valores scriptB;
+    //Valores scriptB;
     Valores scriptC;
     // Start is called before the first frame update
     void Start()
     {
         scriptA = valorA.gameObject.GetComponent<Valores>();
-        scriptB = valorB.gameObject.GetComponent<Valores>();
+       // scriptB = valorB.gameObject.GetComponent<Valores>();
         scriptC = valorC.gameObject.GetComponent<Valores>();
     }
 
@@ -36,7 +36,7 @@ public class PickupValor : MonoBehaviour
             scriptA.value += 1;
             Destroy(col.gameObject);
         }
-        if (col.gameObject.CompareTag("B1"))
+       /* if (col.gameObject.CompareTag("B1"))
         {
             scriptB.value -= 1;
             Destroy(col.gameObject);
@@ -45,7 +45,7 @@ public class PickupValor : MonoBehaviour
         {
             scriptB.value += 1;
             Destroy(col.gameObject);
-        }
+        }*/
         if (col.gameObject.CompareTag("C1"))
         {
             scriptC.value -= 1;
