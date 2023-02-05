@@ -16,6 +16,9 @@ public class Heritage : MonoBehaviour
     Valores scriptC;
     public int uporlow;
     public int result;
+    public GameObject young;
+    public GameObject adult;
+    public GameObject elder;
     // Start is called before the first frame update
     void Start()
     {
@@ -30,6 +33,9 @@ public class Heritage : MonoBehaviour
     void Update()
     {
         if (currentlife >= lifespan) { currentlife= 0; Trascend(); }
+       /* if (currentlife < 23) { young.SetActive(true);adult.SetActive(false);elder.SetActive(false); }
+        else if(currentlife < 48) { young.SetActive(false);adult.SetActive(true);elder.SetActive(false); }
+        else { young.SetActive(false);adult.SetActive(false);elder.SetActive(true); }*/
     }
 
     public void Life()
