@@ -20,6 +20,7 @@ public class Waves : MonoBehaviour
     public GameObject mirar;
     public GameObject quemadura;
     public GameObject traspasar;
+    public GameObject Bola;
 
 
     Queue<float> Estados= new Queue<float>();
@@ -77,6 +78,8 @@ public class Waves : MonoBehaviour
             Spawn();
             spawnTime = Time.time + timeBetweenSpawn;
         }
+
+       
            
     }
 
@@ -121,7 +124,7 @@ public class Waves : MonoBehaviour
         //float valorEstado = colaTemp.Dequeue();
         if (colaTemp.Peek() == 0)
         {
-            
+            Bola.SetActive(false);
             float randomPlataforma = Random.Range(1, 8);
             switch (randomPlataforma)
             {
@@ -156,8 +159,9 @@ public class Waves : MonoBehaviour
         }
         else if (colaTemp.Peek() == 1f)
         {
-           
-            float randomPlataforma = Random.Range(1, 8);
+            Bola.SetActive(true);
+                //Bola.SetActive(true);
+                float randomPlataforma = Random.Range(1, 8);
             switch (randomPlataforma)
             {
                 case 1:
@@ -192,7 +196,7 @@ public class Waves : MonoBehaviour
         
         else if (colaTemp.Peek() == 2f)
         {
-            
+            Bola.SetActive(false);
             float randomPlataforma = Random.Range(1, 8);
             switch (randomPlataforma)
             {
@@ -227,7 +231,7 @@ public class Waves : MonoBehaviour
         }
         else if (colaTemp.Peek() == 3f)
         {
-            
+            Bola.SetActive(false);
             float randomPlataforma = Random.Range(1, 6);
             switch (randomPlataforma)
             {
