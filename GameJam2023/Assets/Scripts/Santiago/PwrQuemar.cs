@@ -11,6 +11,9 @@ public class PwrQuemar : MonoBehaviour
     PowerCooldown cooldownA;
     public float cost;
 
+    public GameObject llamarada;
+    private bool activePower;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -21,10 +24,19 @@ public class PwrQuemar : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Q) && scriptA.one == true && cooldownA.slide1.value >= cost)
+        if (Input.GetKeyDown(KeyCode.Q) && scriptA.one == true && cooldownA.slide1.value >= cost && activePower == false)
         {
             cooldownA.slide1.value -= cost;
             //quemada
+            activePower = true;
+            Instantiate(llamarada, gameObject.transform);
+            StartCoroutine(waitTiempo(5));
         }
+    }
+    IEnumerator waitTiempo(float i)
+    {
+        yield return new WaitForSeconds(i);       
+        Debug.Log("desactiva poder");      
+        activePower = false;
     }
 }
