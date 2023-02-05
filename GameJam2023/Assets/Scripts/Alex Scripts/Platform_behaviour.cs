@@ -7,7 +7,7 @@ public class Platform_behaviour : MonoBehaviour
     public int type;
 
     //atributos para plataforma destruccion
-    public Sprite spritePlatfromDamege;
+    public Sprite spriteChange0, spriteChange1, spriteChange2;
     [SerializeField]
     SpriteRenderer spriteRenderer;
 
@@ -18,6 +18,7 @@ public class Platform_behaviour : MonoBehaviour
     //atributos para raices
     float pSepeed;
     float pJumpingPower;
+    bool vivo;
 
 
     // Start is called before the first frame update
@@ -32,9 +33,11 @@ public class Platform_behaviour : MonoBehaviour
         //referencia del platformeffector2D
         if (type == 1) 
             platformEffector2D = gameObject.GetComponent<PlatformEffector2D>();
-
+        
+        //Para raiz. guarda el valor orginal de la vel y salto.
         pSepeed = OtherPlayerMovement.instance.speed;
         pJumpingPower = OtherPlayerMovement.instance.jumpingPower;
+        vivo = true;
     }
     /*Comportamientos:
      * 0- destrucion
@@ -65,16 +68,18 @@ public class Platform_behaviour : MonoBehaviour
             Debug.Log("Collision type1");
         
             //cambio de srpite
-            spriteRenderer.sprite = spritePlatfromDamege;
+            spriteRenderer.sprite = spriteChange0;
             //conteo atras
-            StartCoroutine(Corrutina(2));
-            //envio del objeto al pool / por ahora desactiva
+            StartCoroutine(Corrutina(2));          
             
         }
-        if (collision.CompareTag("Player") && type == 2)
-        {            
+        if (collision.CompareTag("Player") && type == 2 && vivo)
+        {           
+            //efecto negativo de raices
             OtherPlayerMovement.instance.speed = 2;
-            OtherPlayerMovement.instance.jumpingPower = 10;
+            OtherPlayerMovement.instance.jumpingPower = 15;
+            //cambio de sprites
+            spriteRenderer.sprite = spriteChange0;//sprite agarre
             StartCoroutine(Corrutina(2));
         }
             
@@ -90,12 +95,15 @@ public class Platform_behaviour : MonoBehaviour
             gameObject.SetActive(false);
         }
         
-
+        //efecto raices
         if (type == 2)
         {
+            //vuelta a valores normales
             yield return new WaitForSeconds(i);
             OtherPlayerMovement.instance.speed = pSepeed;
             OtherPlayerMovement.instance.jumpingPower = pJumpingPower;
+            spriteRenderer.sprite = spriteChange1;
+            vivo = false;
             
         }
     }
