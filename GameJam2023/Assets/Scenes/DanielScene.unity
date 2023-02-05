@@ -1882,7 +1882,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 22
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &774534520
 GameObject:
@@ -2498,7 +2498,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 232559811204553144, guid: 5bb7b21066e2ba24f95e770fcd88226d, type: 3}
       propertyPath: m_RootOrder
-      value: 14
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 232559811204553144, guid: 5bb7b21066e2ba24f95e770fcd88226d, type: 3}
       propertyPath: m_LocalScale.x
@@ -4789,7 +4789,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   followSpeed: 2
-  target: {fileID: 2131888526}
+  target: {fileID: 0}
   offset: 1
 --- !u!1001 &1896821088
 PrefabInstance:
@@ -5467,6 +5467,7 @@ GameObject:
   - component: {fileID: 2131888530}
   - component: {fileID: 2131888527}
   - component: {fileID: 2131888523}
+  - component: {fileID: 2131888531}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -5578,7 +5579,7 @@ Transform:
   m_Children:
   - {fileID: 1292356987}
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2131888527
 MonoBehaviour:
@@ -5647,3 +5648,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   txt: {fileID: 1139504337}
+--- !u!114 &2131888531
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2131888522}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad18e355d531f6a4092eaa7558286642, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  n_Platform: RGD_Plataforma(Clone)
+  _gameObject: {fileID: 0}
