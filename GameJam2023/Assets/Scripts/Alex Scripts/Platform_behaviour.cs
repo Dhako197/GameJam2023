@@ -16,15 +16,17 @@ public class Platform_behaviour : MonoBehaviour
     PlatformEffector2D platformEffector2D;
 
     //atributos para raices
-    float pSepeed;
-    float pJumpingPower;
+    OtherPlayerMovement player;
+    GameObject playerGaObjc;
     bool vivo;
 
 
     // Start is called before the first frame update
     void Start()
     {
-              
+        playerGaObjc = GameObject.FindWithTag("Player");
+        player=playerGaObjc.GetComponent<OtherPlayerMovement>();
+
         //Referencia del sprite
         //spriteRenderer = gameObject.GetComponentInChildren<SpriteRenderer>();
         //tipo default
@@ -34,9 +36,8 @@ public class Platform_behaviour : MonoBehaviour
         if (type == 1) 
             platformEffector2D = gameObject.GetComponent<PlatformEffector2D>();
         
-        //Para raiz. guarda el valor orginal de la vel y salto.
-        pSepeed = OtherPlayerMovement.instance.speed;
-        pJumpingPower = OtherPlayerMovement.instance.jumpingPower;
+        //Para raiz. "vivo" se refiere a las raices antes de atrapar el jugador
+        
         vivo = true;
     }
     /*Comportamientos:
@@ -76,8 +77,8 @@ public class Platform_behaviour : MonoBehaviour
         if (collision.CompareTag("Player") && type == 2 && vivo)
         {           
             //efecto negativo de raices
-            OtherPlayerMovement.instance.speed = 2;
-            OtherPlayerMovement.instance.jumpingPower = 15;
+            player.speed = 2;
+            player.jumpingPower = 20;
             //cambio de sprites
             spriteRenderer.sprite = spriteChange0;//sprite agarre
             StartCoroutine(Corrutina(2));
@@ -100,8 +101,8 @@ public class Platform_behaviour : MonoBehaviour
         {
             //vuelta a valores normales
             yield return new WaitForSeconds(i);
-            OtherPlayerMovement.instance.speed = pSepeed;
-            OtherPlayerMovement.instance.jumpingPower = pJumpingPower;
+            player.speed = 8;
+            player.jumpingPower = 24;
             spriteRenderer.sprite = spriteChange1;
             vivo = false;
             
