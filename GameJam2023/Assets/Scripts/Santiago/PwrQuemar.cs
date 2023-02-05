@@ -30,7 +30,7 @@ public class PwrQuemar : MonoBehaviour
             //quemada
             activePower = true;
             Instantiate(llamarada, gameObject.transform);
-            StartCoroutine(waitTiempo(5));
+            StartCoroutine(waitTiempo(0.5f));
         }
     }
     IEnumerator waitTiempo(float i)

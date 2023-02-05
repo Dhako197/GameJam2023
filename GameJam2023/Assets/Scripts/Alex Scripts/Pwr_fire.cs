@@ -29,7 +29,7 @@ public class Pwr_fire : MonoBehaviour
             if (plataforma.type == 2)
             {
                 plataforma.marchitador();
-               
+                Destroy(this.gameObject);
             }
         } 
     }
