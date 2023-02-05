@@ -968,6 +968,85 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &336691926
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 336691927}
+  - component: {fileID: 336691929}
+  - component: {fileID: 336691928}
+  m_Layer: 5
+  m_Name: NameText
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &336691927
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 336691926}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1833298593}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -29.4821, y: 242.275}
+  m_SizeDelta: {x: 339.1173, y: 34.4501}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &336691928
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 336691926}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 17
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 1
+    m_MaxSize: 40
+    m_Alignment: 1
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: New Text
+--- !u!222 &336691929
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 336691926}
+  m_CullTransparentMesh: 1
 --- !u!1 &346484878
 GameObject:
   m_ObjectHideFlags: 0
@@ -3442,6 +3521,42 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2159132746175304462, guid: cc74ce6b4c8b2a54ebfcc6676a39731a, type: 3}
   m_PrefabInstance: {fileID: 1740458021}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1391461767
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1391461766}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2535c3926e0627446967f101aa5ef5e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  display: {fileID: 336691928}
+  lastname: 
+  final: 0
+  firstnames:
+  - Peter
+  - Angel
+  - Daniel
+  - Santiago
+  - Alberto
+  - Jerry
+  - James
+  - Pablo
+  - Antonio
+  - Oscar
+  - Eduardo
+  - "Andr\xE9s"
+  - Alexander
+  - Bruno
+  - Jorge
+  - Samuel
+  - Nicolas
+  - Felipe
+  - Manuel
+  - Mateo
 --- !u!114 &1391461768 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2159132746175304463, guid: cc74ce6b4c8b2a54ebfcc6676a39731a, type: 3}
