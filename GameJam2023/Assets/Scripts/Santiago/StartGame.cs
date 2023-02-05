@@ -7,6 +7,8 @@ using UnityEngine.SceneManagement;
 public class StartGame : MonoBehaviour
 {
     public string scene;
+    public bool enabled;
+    string check;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,6 +23,11 @@ public class StartGame : MonoBehaviour
 
     public void StartScene()
     {
-        SceneManager.LoadScene(scene);
+        check = PlayerPrefs.GetString("familyname");
+        if(check != "" && check != " ")
+        {
+            SceneManager.LoadScene(scene);
+        }
+        
     }
 }

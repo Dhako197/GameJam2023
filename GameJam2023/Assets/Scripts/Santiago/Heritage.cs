@@ -25,12 +25,14 @@ public class Heritage : MonoBehaviour
     public int result;
     public bool infoing;
     public int ggenerations;
+    DisplayName names;
    /* public GameObject young;
     public GameObject adult;
     public GameObject elder;*/
     // Start is called before the first frame update
     void Start()
     {
+        names = this.gameObject.GetComponent<DisplayName>();
         spr = backg.gameObject.GetComponent<SpriteRenderer>();
         infoimg.color = noColor;
         infoing = false;
@@ -85,6 +87,7 @@ public class Heritage : MonoBehaviour
         {
             Inheritance(scriptC, -scriptC.value);
         }
+        names.GiveName();
         infoing= true;
         StartCoroutine(GiveInfo());
         spr.color = sepia;
