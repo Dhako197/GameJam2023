@@ -45,7 +45,7 @@ public class Heritage : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (currentlife >= lifespan) { currentlife= 0; Trascend(); ggenerations++; }
+        if (currentlife == lifespan) { currentlife= 0; Trascend(); ggenerations++; }
         PlayerPrefs.SetInt("generations", ggenerations);
         /* if (currentlife < 23) { young.SetActive(true);adult.SetActive(false);elder.SetActive(false); }
          else if(currentlife < 48) { young.SetActive(false);adult.SetActive(true);elder.SetActive(false); }
