@@ -32,7 +32,7 @@ public class Waves : MonoBehaviour
         tiempoEntreWavesTemp = timeBetweenSpawn;
         for (int i = 0; i < 4; i++)
         {
-            float randomEstado = Random.Range(0, 6);
+            float randomEstado = Random.Range(0, 4);
             if(i >= 1)
             {
                 if(randomEstado ==0 && valorAnterior ==1 || randomEstado == 1 && valorAnterior == 0)
@@ -43,10 +43,7 @@ public class Waves : MonoBehaviour
                 {
                     randomEstado = Random.Range(4, 6);
                 }
-                else if(randomEstado == 4 && valorAnterior == 5 || randomEstado == 5 && valorAnterior == 4)
-                {
-                    randomEstado = Random.Range(0, 2);
-                }
+               
             }
             Estados.Enqueue(randomEstado);
             valorAnterior= randomEstado;
@@ -120,7 +117,7 @@ public class Waves : MonoBehaviour
         if (colaTemp.Peek() == 0)
         {
             timeBetweenSpawn = tiempoEntreWavesTemp;
-            float randomPlataforma = Random.Range(1, 7);
+            float randomPlataforma = Random.Range(1, 6);
             switch (randomPlataforma)
             {
                 case 1:
@@ -144,8 +141,7 @@ public class Waves : MonoBehaviour
                 case 5:
                     RaizPool.Instance.Get().transform.position = spawnPoint[(int)randomSpawn].gameObject.transform.position; break;
 
-                case 6:
-                    RotarPool.Instance.Get().transform.position = spawnPoint[(int)randomSpawn].gameObject.transform.position; break;
+               
 
                 default: break;
             }
@@ -181,79 +177,12 @@ public class Waves : MonoBehaviour
                 default: break;
             }
         }
+       
+        
         else if (colaTemp.Peek() == 2f)
         {
-            
-            timeBetweenSpawn = 1.5f;
-
+            timeBetweenSpawn = tiempoEntreWavesTemp;
             float randomPlataforma = Random.Range(1, 6);
-            switch (randomPlataforma)
-            {
-                case 1:
-
-                    PlataformaBasicaPool.Instance.Get().transform.position = spawnPoint[(int)randomSpawn].gameObject.transform.position;
-                    break;
-
-                case 2:
-                    DestroyPool.Instance.Get().transform.position = spawnPoint[(int)randomSpawn].gameObject.transform.position; break;
-
-
-                case 3:
-                    RigidaPool.Instance.Get().transform.position = spawnPoint[(int)randomSpawn].gameObject.transform.position; break;
-
-                case 4:
-
-
-                    RaizPool.Instance.Get().transform.position = spawnPoint[(int)randomSpawn].gameObject.transform.position; ;
-                    break;
-
-                case 5:
-                    RaizPool.Instance.Get().transform.position = spawnPoint[(int)randomSpawn].gameObject.transform.position; break;
-
-
-                default: break;
-            }
-
-
-        }
-
-        else if (colaTemp.Peek() == 3f)
-        {
-            timeBetweenSpawn = tiempoEntreWavesTemp;
-            float randomPlataforma = Random.Range(1, 7);
-            switch (randomPlataforma)
-            {
-                case 1:
-
-                    PlataformaBasicaPool.Instance.Get().transform.position = spawnPoint[(int)randomSpawn].gameObject.transform.position;
-                    break;
-
-                case 2:
-                    DestroyPool.Instance.Get().transform.position = spawnPoint[(int)randomSpawn].gameObject.transform.position; break;
-
-
-                case 3:
-                    RigidaPool.Instance.Get().transform.position = spawnPoint[(int)randomSpawn].gameObject.transform.position; break;
-
-                case 4:
-
-
-                    RaizPool.Instance.Get().transform.position = spawnPoint[(int)randomSpawn].gameObject.transform.position; ;
-                    break;
-
-                case 5:
-                    RotarPool.Instance.Get().transform.position = spawnPoint[(int)randomSpawn].gameObject.transform.position; break;
-
-                case 6:
-                    RotarPool.Instance.Get().transform.position = spawnPoint[(int)randomSpawn].gameObject.transform.position; break;
-
-                default: break;
-            }
-        }
-        else if (colaTemp.Peek() == 4f)
-        {
-            timeBetweenSpawn = tiempoEntreWavesTemp;
-            float randomPlataforma = Random.Range(1, 7);
             switch (randomPlataforma)
             {
                 case 1:
@@ -277,16 +206,15 @@ public class Waves : MonoBehaviour
                 case 5:
                    RigidaPool.Instance.Get().transform.position = spawnPoint[(int)randomSpawn].gameObject.transform.position; break;
 
-                case 6:
-                    RotarPool.Instance.Get().transform.position = spawnPoint[(int)randomSpawn].gameObject.transform.position; break;
+               
 
                 default: break;
             }
         }
-        else if (colaTemp.Peek() == 5f)
+        else if (colaTemp.Peek() == 3f)
         {
             timeBetweenSpawn = tiempoEntreWavesTemp;
-            float randomPlataforma = Random.Range(1, 7);
+            float randomPlataforma = Random.Range(1, 6);
             switch (randomPlataforma)
             {
                 case 1:
@@ -310,9 +238,7 @@ public class Waves : MonoBehaviour
                 case 5:
                     DestroyPool.Instance.Get().transform.position = spawnPoint[(int)randomSpawn].gameObject.transform.position; break;
 
-                case 6:
-                    RotarPool.Instance.Get().transform.position = spawnPoint[(int)randomSpawn].gameObject.transform.position; break;
-
+                
                 default: break;
             }
         }
