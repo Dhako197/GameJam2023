@@ -24,9 +24,12 @@ public class OtherPlayerMovement : MonoBehaviour
     public float speed { get => _speed; set => _speed = value; }
     public float jumpingPower { get => _jumpingPower; set => _jumpingPower = value; }
 
-    private void Awake()
+    //A
+    private Animator animator;
+
+    void Start()
     {
-       
+        animator = GetComponent<Animator>();
     }
 
     void Update()
@@ -39,7 +42,10 @@ public class OtherPlayerMovement : MonoBehaviour
             rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
             //inAir = true;
         }
-       
+
+        animator.SetFloat("Movement", (((rb.velocity.x)* (rb.velocity.x))/2));
+
+        animator.SetFloat("Jump", rb.velocity.y);
 
         if (Input.GetKeyDown(KeyCode.UpArrow) && rb.velocity.y > 0f)
         {
