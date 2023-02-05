@@ -2,8 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class PwrQuemar : MonoBehaviour
 {
+    
     public GameObject ControllerA;
     Valores scriptA;
     PowerCooldown cooldownA;
