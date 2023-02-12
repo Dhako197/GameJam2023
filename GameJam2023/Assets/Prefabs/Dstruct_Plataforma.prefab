@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 337151749921618757}
   - component: {fileID: 8393575550052932832}
   - component: {fileID: 6596928569326321567}
+  - component: {fileID: 6879208527519763804}
   m_Layer: 3
   m_Name: Dstruct_Plataforma
   m_TagString: Suelo
@@ -147,6 +148,18 @@ MonoBehaviour:
   spriteRenderer: {fileID: 1143678366905660424}
   destructionTime: 0
   valorC: {fileID: 0}
+--- !u!114 &6879208527519763804
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6392517166718729970}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d29ff3dc02a1a2d40aea9376b1d43aca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6881312030411813243
 GameObject:
   m_ObjectHideFlags: 0
