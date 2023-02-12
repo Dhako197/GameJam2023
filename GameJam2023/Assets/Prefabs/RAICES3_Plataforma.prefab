@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 2254230992014745211}
   - component: {fileID: 2254230992014745208}
   m_Layer: 3
-  m_Name: RCES3_Plataforma
+  m_Name: RAICES3_Plataforma
   m_TagString: Suelo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

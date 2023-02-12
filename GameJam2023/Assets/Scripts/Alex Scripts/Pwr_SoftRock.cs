@@ -35,7 +35,7 @@ public class Pwr_SoftRock : MonoBehaviour
 
     void ActivatePlatform()
     {
-        Debug.Log("ActivatePlatform");
+       // Debug.Log("ActivatePlatform");
        suelos = GameObject.FindGameObjectsWithTag("Suelo");
 
         for (int i = 0; i < suelos.Length; i++)

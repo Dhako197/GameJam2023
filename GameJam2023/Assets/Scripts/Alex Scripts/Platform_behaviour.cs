@@ -11,6 +11,8 @@ public class Platform_behaviour : MonoBehaviour
     [SerializeField]
     SpriteRenderer spriteRenderer;
     int colisiones = 0;
+    [SerializeField]
+    float destructionTime;
 
 
     //atributos rotación
@@ -81,7 +83,8 @@ public class Platform_behaviour : MonoBehaviour
              //cambio de srpite
             spriteRenderer.sprite = spriteChange0;
             //conteo atras
-            StartCoroutine(Corrutina(2f));          
+            if (destructionTime < 1) destructionTime = 1;
+            StartCoroutine(Timer(destructionTime));          
             
         }
         if (collision.CompareTag("Player") && type == 2 && vivo)
@@ -91,7 +94,7 @@ public class Platform_behaviour : MonoBehaviour
             player.jumpingPower = 20;
             //cambio de sprites
             spriteRenderer.sprite = spriteChange0;//sprite agarre
-            StartCoroutine(Corrutina(2));
+            StartCoroutine(Timer(2));
         }
             
     }
@@ -112,18 +115,18 @@ public class Platform_behaviour : MonoBehaviour
        
     }
 
-    IEnumerator Corrutina(float i)
+    IEnumerator Timer(float i)
     {
 
         Debug.Log("inicia corrutina");
 
         if(type == 0 )
         {
-            yield return new WaitForSeconds(i+2);
+            yield return new WaitForSeconds(i);
             spriteRenderer.sprite = spriteChange1;
-            yield return new WaitForSeconds(i+1);
+            yield return new WaitForSeconds(i/3);
             spriteRenderer.sprite = spriteChange2;
-            yield return new WaitForSeconds(i-1.9f);
+            yield return new WaitForSeconds(0.2f);
             gameObject.SetActive(false);
 
         }
