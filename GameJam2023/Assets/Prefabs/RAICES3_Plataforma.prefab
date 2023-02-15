@@ -89,7 +89,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2049864394356426695}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d29ff3dc02a1a2d40aea9376b1d43aca, type: 3}
   m_Name: 
@@ -158,6 +158,8 @@ MonoBehaviour:
   spriteChange1: {fileID: 21300000, guid: 7bd1fbefc83984448b0545d7d0318378, type: 3}
   spriteChange2: {fileID: 0}
   spriteRenderer: {fileID: 1167838446951914189}
+  destructionTime: 0
+  valorC: {fileID: 0}
 --- !u!1 &4653488755745251262
 GameObject:
   m_ObjectHideFlags: 0
