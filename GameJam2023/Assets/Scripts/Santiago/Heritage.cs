@@ -6,8 +6,6 @@ using UnityEngine.UI;
 
 public class Heritage : MonoBehaviour
 {
-    public GameObject backg;
-    public SpriteRenderer spr;
     public Image infoimg;
     public Color sepia;
     public Color noColor = new Color(255f, 255f, 255f, 0f);
@@ -33,7 +31,7 @@ public class Heritage : MonoBehaviour
     void Start()
     {
         names = this.gameObject.GetComponent<DisplayName>();
-        spr = backg.gameObject.GetComponent<SpriteRenderer>();
+       // spr = backg.gameObject.GetComponent<SpriteRenderer>();
         infoimg.color = noColor;
         infoing = false;
         ggenerations = 1;
@@ -90,7 +88,7 @@ public class Heritage : MonoBehaviour
         names.GiveName();
         infoing= true;
         StartCoroutine(GiveInfo());
-        spr.color = sepia;
+        //spr.color = sepia;
         infoimg.color = Visible;
       /*  if (scriptB.value >= 0)
         {
@@ -107,7 +105,7 @@ public class Heritage : MonoBehaviour
         yield return new WaitForSeconds(1.5f);
         
         infoimg.color = noColor;
-        spr.color = Visible;
+      //  spr.color = Visible;
         infoing = false;
 
     }

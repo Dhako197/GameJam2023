@@ -128,8 +128,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 1
-  spritePlatfromDamege: {fileID: 0}
+  spriteChange0: {fileID: 0}
+  spriteChange1: {fileID: 0}
+  spriteChange2: {fileID: 0}
   spriteRenderer: {fileID: 0}
+  destructionTime: 0
+  valorC: {fileID: 0}
 --- !u!233 &1657813292
 HingeJoint2D:
   m_ObjectHideFlags: 0
@@ -145,7 +149,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 2.31, y: -1.74}
+  m_ConnectedAnchor: {x: 0.92, y: -1.19}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0

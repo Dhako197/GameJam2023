@@ -25,22 +25,6 @@ public class OtherPlayerMovement : MonoBehaviour
     public float speed { get => _speed; set => _speed = value; }
     public float jumpingPower { get => _jumpingPower; set => _jumpingPower = value; }
 
-    //A
-    private Animator animator;
-    private int ToKid, ToYoung, ToOld;
-    bool PassToKid, PassToYoung, PassToOld;
-
-    void Start()
-    {
-        animator = GetComponent<Animator>();
-        ToKid = 0;
-        ToYoung= 23;
-        ToOld = 48;
-        PassToKid = true;
-        PassToYoung = false; 
-        PassToOld = false;
-    }
-
     void Update()
     {
         horizontal = Input.GetAxisRaw("Horizontal");
@@ -51,56 +35,6 @@ public class OtherPlayerMovement : MonoBehaviour
             rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
             //inAir = true;
         }
-        /*
-        if(script.currentlife >= ToYoung  && script.currentlife < ToOld && PassToYoung==false)
-        {
-            PassToKid = false;
-            animator.SetBool("ToYoung", true);
-            PassToYoung = true;
-        }
-
-        if (script.currentlife >= ToOld && PassToOld == false)
-        {
-            PassToYoung = false;
-            animator.SetBool("ToOld", true);
-            PassToOld = true;
-        }
-
-        if (script.currentlife >= ToKid && script.currentlife < ToYoung && PassToKid == false)
-        {
-            PassToOld = false;
-            animator.SetBool("ToKid", true);
-            PassToKid = true;
-        }
-        */
-
-        if (script.currentlife == ToYoung && PassToYoung == false)
-        {
-            PassToKid = false;
-            animator.SetBool("ToYoung", true);
-            animator.SetBool("ToKid", false);
-            PassToYoung = true;
-        }
-
-        if (script.currentlife == ToOld && PassToOld == false)
-        {
-            PassToYoung = false;
-            animator.SetBool("ToOld", true);
-            animator.SetBool("ToYoung", false);
-            PassToOld = true;
-        }
-
-        if (script.currentlife == ToKid && PassToKid == false)
-        {
-            PassToOld = false;
-            animator.SetBool("ToKid", true);
-            animator.SetBool("ToOld", false);
-            PassToKid = true;
-        }
-
-        animator.SetFloat("Movement", (((rb.velocity.x)* (rb.velocity.x))/2));
-
-        animator.SetFloat("Jump", rb.velocity.y);
 
         if (Input.GetKeyDown(KeyCode.UpArrow) && rb.velocity.y > 0f)
         {
