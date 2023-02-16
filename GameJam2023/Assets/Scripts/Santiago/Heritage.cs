@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class Heritage : MonoBehaviour
 {
-    public Image infoimg;
+   //A public Image infoimg;
     public Color sepia;
     public Color noColor = new Color(255f, 255f, 255f, 0f);
     public Color Visible = new Color(255f, 255f, 255f, 255f);
@@ -32,7 +32,7 @@ public class Heritage : MonoBehaviour
     {
         names = this.gameObject.GetComponent<DisplayName>();
        // spr = backg.gameObject.GetComponent<SpriteRenderer>();
-        infoimg.color = noColor;
+       //A infoimg.color = noColor;
         infoing = false;
         ggenerations = 1;
         
@@ -89,7 +89,7 @@ public class Heritage : MonoBehaviour
         infoing= true;
         StartCoroutine(GiveInfo());
         //spr.color = sepia;
-        infoimg.color = Visible;
+       //A infoimg.color = Visible;
       /*  if (scriptB.value >= 0)
         {
             Inheritance(scriptB, scriptB.value);
@@ -104,7 +104,7 @@ public class Heritage : MonoBehaviour
     {
         yield return new WaitForSeconds(1.5f);
         
-        infoimg.color = noColor;
+       //A infoimg.color = noColor;
       //  spr.color = Visible;
         infoing = false;
 
