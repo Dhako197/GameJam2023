@@ -18,7 +18,6 @@ public class BackgroundScroller : MonoBehaviour
     void Update()
     {
         Offset += (rb.velocity.y)/ ScrollSpeed;
-        //Offset += (Time.deltaTime * ScrollSpeed)/10f;
         mat.SetTextureOffset("_MainTex", new Vector2(0,Offset));
     }
 }

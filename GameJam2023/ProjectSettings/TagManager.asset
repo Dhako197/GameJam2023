@@ -20,6 +20,7 @@ TagManager:
   - C1
   - C2
   - Pua
+  - Group
   layers:
   - Default
   - TransparentFX
